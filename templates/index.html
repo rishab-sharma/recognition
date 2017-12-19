@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html class="no-js"> 
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Precog Task B Rishab Sharma</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+ <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+  <link rel="shortcut icon" href="{{ url_for('static',filename='favicon.png') }}">
+
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+  
+  <!-- Animate.css -->
+  <link rel="stylesheet" href="{{ url_for('static',filename='animate.css') }}">
+  <!-- Icomoon Icon Fonts-->
+  <link rel="stylesheet" href="{{ url_for('static',filename='icomoon.css') }}">
+  <!-- Bootstrap  -->
+  <link rel="stylesheet" href="{{ url_for('static',filename='bootstrap.css') }}">
+
+  <link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">
+
+  <script src="{{ url_for('static',filename='modernizr-2.6.2.min.js') }}"></script>
+
+  </head>
+  <body>
+  <nav id="fh5co-main-nav" role="navigation">
+    <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle active"><i></i></a>
+    <div class="js-fullheight fh5co-table">
+      <div class="fh5co-table-cell js-fullheight">
+        <ul>
+          <li><a href="/">Home</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div id="fh5co-page">
+    <header>
+      <div class="container">
+        <div class="fh5co-navbar-brand">
+          <a class="fh5co-logo" href="index.html">Task B Precog - Rishab Sharma</a>
+        </div>
+        <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
+      </div>
+    </header>
+    <div id="fh5co-portfolio-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2 text-center heading-section">
+            <h2>Detect Face of A. Kejriwal Or N. Modi</h2>
+            <h3>Upload the Image and see the result</h3>
+          </div>
+        </div>
+
+        <div class="container">
+  <form id='upload-form' action="/" method="POST" enctype="multipart/form-data">
+
+    <label for="fname">Browse and Select Image</label>
+    <input type="file" name="file" accept="image/jpg, image/jpeg">
+    <input type="submit" value="Submit">
+  </form>
+</div>
+<div class="box">
+<h2> <center>Output Section</center></h2>
+<table class="table"border="3px">
+  <tr>
+    <td align="center" width="200">Presence of Face: </td>
+    <td align="center" width="200">{{faces}}</td>
+    <td align="center" rowspan="6"> <img src="{{source}}" width="150" height="150" onerror="this.src='/static/upload.ico'"></td>
+  </tr>
+  <tr>
+    <td align="center" width="200">A. Kejriwal: </td>
+    <td align="center" width="200">{{AK}}</td>
+  </tr>
+   <tr>
+    <td align="center" width="200">N. Modi: </td>
+    <td align="center" width="200">{{NM}}</td>
+  </tr>
+</table>
+</div>
+    <!-- END fh5co-portfolio-section -->
+    <footer>
+      <div id="footer" class="fh5co-border-line">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <p> End of page </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  
+
+  <script src="{{ url_for('static',filename='jquery.min.js') }}"></script>
+  <!-- jQuery Easing -->
+  <script src="{{ url_for('static',filename='jquery.easing.1.3.js') }}"></script>
+  <!-- Bootstrap -->
+  <script src="{{ url_for('static',filename='bootstrap.min.js') }}"></script>
+  <!-- Waypoints -->
+  <script src="{{ url_for('static',filename='jquery.waypoints.min.js') }}"></script>
+  <!-- Portfolio Filter Mixitup -->
+  <script type="text/javascript" src="{{ url_for('static',filename='jquery.mixitup.min.js') }}"></script>
+
+  <!-- Main JS (Do not remove) -->
+  <script src="{{ url_for('static',filename='main.js') }}"></script>
+
+  <script type="text/javascript">
+  $(function () {
+    
+    var filterList = {
+    
+      init: function () {
+      
+        // MixItUp plugin
+        // http://mixitup.io
+        $('#portfoliolist').mixItUp({
+          selectors: {
+            target: '.portfolio',
+            filter: '.filter' 
+          },
+          load: {
+            filter: '.all'  
+          }     
+        });               
+      
+      }
+
+    };
+    
+    // Run the show!
+    filterList.init();
+
+    
+    
+  }); 
+  </script>
+
+  </body>
+</html>
+
