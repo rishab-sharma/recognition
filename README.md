@@ -18,6 +18,33 @@ You are not allowed to use any online services and/or APIs for facial recognitio
 
 You are required to curate a data set for your model(s) by using any image search APIs and would be required to store them in a MongoDB collection. We expect you to split your collected data set into training and testing sets. Use the training set only, to train your model(s) and then test the trained model on the testing data set. Make sure, there is no overlap of samples between the training and the testing data sets.
 
+## Dependencies
+
+bleach==1.5.0
+click==6.7
+enum34==1.1.6
+Flask==0.12.2
+gunicorn==19.7.1
+h5py==2.7.1
+html5lib==0.9999999
+itsdangerous==0.24
+Jinja2==2.10
+Keras==2.1.2
+Markdown==2.6.10
+MarkupSafe==1.0
+numpy==1.13.3
+olefile==0.44
+opencv-python==3.3.0.10
+Pillow==4.3.0
+protobuf==3.5.0.post1
+pymongo==3.6.0
+PyYAML==3.12
+scipy==1.0.0
+six==1.11.0
+tensorflow==1.4.1
+tensorflow-tensorboard==0.4.0rc3
+Werkzeug==0.13
+
 ## Model
 
 model = Sequential()
