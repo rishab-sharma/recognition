@@ -9,5 +9,4 @@ A Webapp to detect face of Narendra Modi and Arvind Kejriwal using convolutional
 4. Check the results
 
 ## UI
-
-
+![alt text](http://url/to/img.png)
